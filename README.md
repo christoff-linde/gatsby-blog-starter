@@ -27,8 +27,8 @@ In order to submit this assignment you will need to create a fork of this projec
     Use the Gatsby CLI to create a new site, specifying the blog starter.
 
     ```shell
-    # create a new Gatsby site using the blog starter
-    gatsby new my-blog-starter https://github.com/gatsbyjs/gatsby-starter-blog
+    # clone this project
+    git clone https://github.com/teamgeek-io/blog-starter.git
     ```
 
 1.  **Start developing.**
@@ -36,7 +36,7 @@ In order to submit this assignment you will need to create a fork of this projec
     Navigate into your new site’s directory and start it up.
 
     ```shell
-    cd my-blog-starter/
+    cd blog-starter/
     gatsby develop
     ```
 
