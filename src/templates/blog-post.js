@@ -82,7 +82,7 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
-        """ Add gatsby image query here """
+        # Add gatsby image query here
       }
     }
     previous: markdownRemark(id: { eq: $previousPostId }) {
