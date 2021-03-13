@@ -22,15 +22,6 @@ In order to submit this assignment you will need to create a fork of this projec
 
 ## 🚀 Quick start
 
-1.  **Create a Gatsby site.**
-
-    Use the Gatsby CLI to create a new site, specifying the blog starter.
-
-    ```shell
-    # clone this project
-    git clone https://github.com/teamgeek-io/blog-starter.git
-    ```
-
 1.  **Start developing.**
 
     Navigate into your new site’s directory and start it up.
