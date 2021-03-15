@@ -8,7 +8,7 @@ We need you to take this sample project and add some extra features and complete
 
 ## Key goals
 
-- Implementing pagination for the index page of the blog as seen in the design (Pages will need to generated in `gatsby-node.js`)
+- Implementing pagination for the index page of the blog as seen in the design (Pages will need to be generated in `gatsby-node.js`)
 - Matching the design exactly on desktop.
 - Making use of [gatbsy-plugin-image](https://www.gatsbyjs.com/plugins/gatsby-plugin-image) for images that appear on the index page as well as the hero image on the actual blog post page.
 - The project will have to be responsive and work well on mobile.
