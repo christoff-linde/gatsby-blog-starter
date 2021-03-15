@@ -14,6 +14,10 @@ We need you to take this sample project and add some extra features and complete
 - The project will have to be responsive and work well on mobile.
 - We will be assessing your final solution by building the project using `yarn build` and `yarn serve` so make sure your project can be built without any errors.
 
+## Dependancies / tools
+
+- You may install any depandancies or tools that may be required.
+
 ## Submission
 
 In order to submit this assignment you will need to create a fork of this project on your own GitHub account. When you are done, submit a link of your public fork to work@teamgeek.io (Please do not create a pull-request)
