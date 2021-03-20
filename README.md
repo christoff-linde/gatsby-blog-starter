@@ -1,12 +1,12 @@
-# Blog starter project
+# Gatsby blog starter project
 
 This is a sample blog starter project to test your ability to learn new skills and apply your existing skills to a Gatsby project.
 
-## What you need to do.
+## What you need to do
 
 We need you to take this sample project and add some extra features and completely overhaul the visual layout and design of the project to match this design: https://xd.adobe.com/view/bf79f426-9e97-4e02-a1ff-1cc7f34ed338-ea2a/.
 
-## Key goals
+## Key goals and deliverables
 
 - Implementing pagination for the index page of the blog as seen in the design (Pages will need to be generated in `gatsby-node.js`)
 - Matching the design exactly on desktop.
@@ -14,9 +14,9 @@ We need you to take this sample project and add some extra features and complete
 - The project will have to be responsive and work well on mobile.
 - We will be assessing your final solution by building the project using `yarn build` and `yarn serve` so make sure your project can be built without any errors.
 
-## Dependancies / tools
+## Dependencies and tools
 
-- You may install any depandancies or tools that may be required.
+- You may install any depandencies or tools that may be required.
 
 ## Submission
 
