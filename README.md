@@ -20,7 +20,16 @@ We need you to take this sample project and add some extra features and complete
 
 ## Submission
 
-In order to submit this assignment you will need to create a fork of this project on your own GitHub account. When you are done, submit a link of your public fork to work@teamgeek.io (Please do not create a pull-request)
+In order to submit this assignment you will need to create a fork of this project on your own GitHub account. When you are done, submit a link of your public fork to work@teamgeek.io (Please do not create a pull-request).
+
+**NOTE:** Do not remove the *Plagiarism declaration*.
+
+## Plagiarism declaration
+
+1. I know that plagiarism is wrong. Plagiarism is to use another’s work and pretend that it is one’s own.
+2. This assignment is my own work.
+3. I have not allowed, and will not allow, anyone to copy my work with the intention of passing it off as his or her own work.
+4. I acknowledge that copying someone else’s assignment (or part of it) is wrong and declare that my assignments are my own work.
 
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 
