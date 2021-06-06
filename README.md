@@ -20,7 +20,7 @@ We need you to take this sample project and add some extra features and complete
 
 ## Submission
 
-In order to submit this assignment you will need to create a fork of this project on your own GitHub account. When you are done, submit a link of your public fork to work@teamgeek.io (Please do not create a pull-request).
+In order to submit this assignment you will need clone this project and then [push the repo](https://stackoverflow.com/questions/45196631/how-to-upload-a-cloned-git-repository-to-an-own-git-repository-on-github) to your own GitHub account. When you are done, submit a link of your public repo to work@teamgeek.io (Please do not create a pull-request).
 
 **NOTE:** Do not remove the *Plagiarism declaration*.
 
