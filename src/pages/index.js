@@ -1,8 +1,10 @@
 import * as React from "react"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import { getImage } from "gatsby-plugin-image"
+import BlogCard from "../components/card"
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
@@ -24,38 +26,16 @@ const BlogIndex = ({ data, location }) => {
   return (
     <Layout location={location} title={siteTitle}>
       <SEO title="All posts" />
-      <ol style={{ listStyle: `none` }}>
+      <div className="card-container">
         {posts.map(post => {
-          const title = post.frontmatter.title || post.fields.slug
-
+          // const image = getImage(post.frontmatter.image);
+          // const title = post.frontmatter.title || post.fields.slug
+          // console.log(post);
           return (
-            <li key={post.fields.slug}>
-              <article
-                className="post-list-item"
-                itemScope
-                itemType="http://schema.org/Article"
-              >
-                <header>
-                  <h2>
-                    <Link to={post.fields.slug} itemProp="url">
-                      <span itemProp="headline">{title}</span>
-                    </Link>
-                  </h2>
-                  <small>{post.frontmatter.date}</small>
-                </header>
-                <section>
-                  <p
-                    dangerouslySetInnerHTML={{
-                      __html: post.frontmatter.description || post.excerpt,
-                    }}
-                    itemProp="description"
-                  />
-                </section>
-              </article>
-            </li>
+            <BlogCard key={post.fields.slug} data={post} />
           )
         })}
-      </ol>
+      </div>
     </Layout>
   )
 }
@@ -71,6 +51,7 @@ export const pageQuery = graphql`
     }
     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
       nodes {
+        id
         excerpt
         fields {
           slug
@@ -79,6 +60,11 @@ export const pageQuery = graphql`
           date(formatString: "MMMM DD, YYYY")
           title
           description
+          image {
+            childImageSharp {
+              gatsbyImageData
+            }
+          }
         }
       }
     }
