@@ -3,7 +3,6 @@ import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { getImage } from "gatsby-plugin-image"
 import BlogCard from "../components/card"
 
 const BlogIndex = ({ data, location }) => {
