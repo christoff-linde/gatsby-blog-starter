@@ -24,6 +24,7 @@ const BlogPostTemplate = ({ data, location }) => {
       >
         <header>
           <GatsbyImage
+            className="expand"
             image={image}
             alt={``}
           />
@@ -89,7 +90,7 @@ export const pageQuery = graphql`
         description
         image {
           childImageSharp {
-            gatsbyImageData
+            gatsbyImageData(height: 479, transformOptions: {fit: COVER})
           }
         }
       }

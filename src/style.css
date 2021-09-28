@@ -20,13 +20,16 @@
   --spacing-4: 1rem;
   --spacing-5: 1.25rem;
   --spacing-6: 1.5rem;
+  --spacing-7: 1.6875rem;
   --spacing-8: 2rem;
   --spacing-10: 2.5rem;
+  --spacing-11: 2.625rem;
   --spacing-12: 3rem;
   --spacing-16: 4rem;
   --spacing-20: 5rem;
   --spacing-24: 6rem;
   --spacing-32: 8rem;
+  --spacing-42: 10rem;
   --fontFamily-sans: Montserrat, system-ui, -apple-system, BlinkMacSystemFont,
     "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -56,8 +59,8 @@
   --fontSize-7: 2.986rem;
   --color-primary: #005b99;
   --color-text: #2e353f;
-  --color-text-light: #4f5969;
-  --color-heading: #1a202c;
+  --color-text-light: #707070;
+  --color-heading: #000033;
   --color-heading-black: black;
   --color-accent: #d1dce5;
 
@@ -106,7 +109,7 @@ h4,
 h5,
 h6 {
   font-family: var(--font-heading);
-  margin-top: var(--spacing-12);
+  margin-top: var(--spacing-8);
   margin-bottom: var(--spacing-6);
   line-height: var(--lineHeight-tight);
   letter-spacing: -0.025em;
@@ -122,9 +125,9 @@ h6 {
 }
 
 h1 {
-  font-weight: var(--fontWeight-black);
+  font-weight: var(--fontWeight-bold);
   font-size: var(--fontSize-6);
-  color: var(--color-heading-black);
+  color: var(--color-heading);
 }
 
 h2 {
@@ -247,8 +250,9 @@ a:focus {
 .global-wrapper {
   margin: var(--spacing-0) auto;
   /* max-width: var(--maxWidth-wrapper); */
-  max-width: 1432px;
-  padding: var(--spacing-10) var(--spacing-5);
+  max-width: 1396px;
+  /* padding: var(--spacing-10) var(--spacing-5); */
+  position: relative;
 }
 
 .global-wrapper[data-is-root-path="true"] .bio {
@@ -320,16 +324,22 @@ a:focus {
 }
 
 .blog-post header h1 {
-  margin: var(--spacing-0) var(--spacing-0) var(--spacing-4) var(--spacing-0);
+  margin: var(--spacing-11) var(--spacing-0) var(--spacing-4) var(--spacing-0);
 }
 
 .blog-post header p {
   font-size: var(--fontSize-2);
   font-family: var(--font-heading);
+  margin: var(--spacing-4) var(--spacing-0) var(--spacing-7) var(--spacing-0);
 }
 
 .blog-post-nav ul {
   margin: var(--spacing-0);
+}
+
+.blog-post {
+  max-width: var(--maxWidth-wrapper);
+  margin: 0 auto;
 }
 
 .gatsby-highlight {
@@ -341,7 +351,46 @@ a:focus {
   grid-template-columns: repeat(auto-fill, minmax(452px, 1fr));
   /* This is better for small screens, once min() is better supported */
   /* grid-template-columns: repeat(auto-fill, minmax(min(200px, 100%), 1fr)); */
-  gap: 1rem;
+  /* gap: 1rem; */
+  row-gap: 42px;
+  column-gap: 38px;
+}
+
+.card-body {
+  margin-top: 35px;
+  padding-left: 39px;
+  padding-right: 25px;
+  padding-bottom: 45px;
+}
+
+.card-body small {
+  font-family: var(--fontFamily-sans);
+  font-size: var(--fontSize-1);
+  font-weight: var(--fontWeight-normal);
+  color: var(--color-text-light);
+}
+
+.card-body p {
+  font-family: var(--fontFamily-sans);
+  font-size: var(--fontSize-1);
+  font-weight: var(--fontWeight-normal);
+  color: var(--color-text-light);
+}
+
+.card-body h2{
+  font-weight: var(--fontWeight-semibold);
+  color: var(--color-heading);
+  font-size: var(--fontSize-2);
+}
+
+.expand {
+  /* width: 100vw;
+  margin: 0 auto;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw; */
 }
 
 /* Media queries */
