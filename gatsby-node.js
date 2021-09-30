@@ -6,6 +6,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   // Define a template for blog post
   const blogPost = path.resolve(`./src/templates/blog-post.js`)
+  const blogList = path.resolve(`./src/templates/blog-list.js`)
 
   // Get all markdown blog posts sorted by date
   const result = await graphql(
@@ -56,6 +57,23 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       })
     })
   }
+
+  // Create blog post list pages
+  const postsPerPage = 6;
+  const numPages = Math.ceil(posts.length / postsPerPage);
+
+  Array.from({ length: numPages }).forEach((post, index) => {
+    createPage({
+      path: index === 0 ? `/` : `/${index + 1}`,
+      component: blogList,
+      context: {
+        limit: postsPerPage,
+        skip: index * postsPerPage,
+        numPages,
+        currentPage: index + 1
+      },
+    });
+  });
 }
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
