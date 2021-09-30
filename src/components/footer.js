@@ -15,22 +15,22 @@ const PageFooter = () => {
                         <h5>About Us</h5>
                         <ul className="footer-list">
                             <li className="">
-                                <Link to="">
+                                <Link to="/">
                                     Locations
                                 </Link>
                             </li>
                             <li>
-                                <Link to="">
+                                <Link to="/">
                                     What we do
                                 </Link>
                             </li>
                             <li>
-                                <Link to="">
+                                <Link to="/">
                                     How we do it
                                 </Link>
                             </li>
                             <li>
-                                <Link to="">
+                                <Link to="/">
                                     Who we are
                                 </Link>
                             </li>
@@ -40,22 +40,22 @@ const PageFooter = () => {
                         <h5>Product</h5>
                         <ul className="footer-list">
                             <li>
-                                <Link to="">
+                                <Link to="/">
                                     Prints
                                 </Link>
                             </li>
                             <li>
-                                <Link to="">
+                                <Link to="/">
                                     Lorem ipsum
                                 </Link>
                             </li>
                             <li>
-                                <Link to="">
+                                <Link to="/">
                                     This is dummy text
                                 </Link>
                             </li>
                             <li>
-                                <Link to="">
+                                <Link to="/">
                                     Hello
                                 </Link>
                             </li>
@@ -65,14 +65,22 @@ const PageFooter = () => {
                         <h5>Contact Us</h5>
                         <ul className="footer-list">
                             <li>
-                                <Link to="">
-                                    work@teamgeek.io
-                                </Link>
+                                <div itemscope itemtype="http://schema.org/LocalBusiness">
+                                    <span itemprop="email">
+                                        <a href="mailto:work@teamgeek.io">
+                                            work@teamgeek.io
+                                        </a>
+                                    </span>
+                                </div>
                             </li>
                             <li>
-                                <Link to="">
-                                    +27 891 2008
-                                </Link>
+                                <div itemscope itemtype="http://schema.org/LocalBusiness">
+                                    <span itemprop="telephone">
+                                        <a href="tel:+278912008">
+                                            +278912008
+                                        </a>
+                                    </span>
+                                </div>
                             </li>
                         </ul>
                     </div>

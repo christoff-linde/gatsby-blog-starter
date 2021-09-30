@@ -54,13 +54,6 @@ const BlogListTemplate = ({ data, location, pageContext }) => {
                             </Link>
                         )}
                     </li>
-                    {/* {!isFirst && (
-                        <li className="page-arrow">
-                            <Link to={prevPage} rel="prev">
-                                &lt;
-                            </Link>
-                        </li>
-                    )} */}
                     {Array.from({ length: numPages }, (_, i) => (
                         <li className="page-link"
                             key={`pagination-number${i + 1}`}>
