@@ -295,6 +295,12 @@ a:focus {
   height: 639px;
 }
 
+.post-list-item:hover {
+  transform: scale(102%);
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
 .post-list-item p {
   margin-bottom: var(--spacing-0);
 }
@@ -308,6 +314,40 @@ a:focus {
 
 .post-list-item header {
   margin-bottom: var(--spacing-4);
+}
+
+.page-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  gap: 18px;
+  max-width: fit-content;
+}
+
+.page-list li:hover {
+  transition: all 0.3s;
+  background-color: var(--color-primary);
+}
+
+.page-list li {
+  border-radius: 3px;
+  color: var(--color-heading);
+  box-shadow: 0px 3px 6px #00000029;
+  background-color: var(--color-white);
+  width: 47px;
+  height: 47px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.page-list a {
+  text-decoration: none;
+  font-family: var(--fontFamily-sans);
+  font-size: var(--fontSize-2);
+  font-weight: var(--fontWeight-bold);
 }
 
 .header-link-home {

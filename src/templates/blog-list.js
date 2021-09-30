@@ -42,19 +42,10 @@ const BlogListTemplate = ({ data, location, pageContext }) => {
                     )
                 })}
             </div>
-            <ul
-                style={{
-                    display: 'flex',
-                    flexWrap: 'wrap',
-                    justifyContent: 'space-between',
-                    alignItems: 'center',
-                    listStyle: 'none',
-                    padding: 0,
-                }}
-            >
+            <ul className="page-list">
                 {!isFirst && (
-                    <Link to={prevPage} rel="prev">
-                        ← Previous Page
+                    <Link className="page-link" to={prevPage} rel="prev">
+                        &lt;
                     </Link>
                 )}
                 {Array.from({ length: numPages }, (_, i) => (
@@ -65,11 +56,17 @@ const BlogListTemplate = ({ data, location, pageContext }) => {
                         }}
                     >
                         <Link
+                            className="page-link active"
                             to={`/${i === 0 ? '' : i + 1}`}
                             style={{
-                                textDecoration: 'none',
                                 color: i + 1 === currentPage ? '#ffffff' : '',
-                                background: i + 1 === currentPage ? '#007acc' : '',
+                                background: i + 1 === currentPage ? '#000033' : '',
+                                width: 47,
+                                height: 47,
+                                display: 'flex',
+                                alignItems: 'center',
+                                justifyContent: 'center',
+                                borderRadius: 3
                             }}
                         >
                             {i + 1}
@@ -77,8 +74,8 @@ const BlogListTemplate = ({ data, location, pageContext }) => {
                     </li>
                 ))}
                 {!isLast && (
-                    <Link to={nextPage} rel="next">
-                        Next Page →
+                    <Link className="page-link" to={nextPage} rel="next">
+                        &gt;
                     </Link>
                 )}
             </ul>
