@@ -1,16 +1,16 @@
 import * as React from 'react'
 import { graphql, Link } from 'gatsby'
 
-import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import BlogCard from '../components/card'
+import Banner from '../components/banner'
 
 const BlogListTemplate = ({ data, location, pageContext }) => {
     const siteTitle = data.site.siteMetadata?.title || `Title`
     const posts = data.allMarkdownRemark.edges
 
-    console.log(posts);
+    console.log(data);
 
     const { currentPage, numPages } = pageContext
     const isFirst = currentPage === 1
@@ -34,6 +34,7 @@ const BlogListTemplate = ({ data, location, pageContext }) => {
     return (
         <Layout location={location} title={siteTitle}>
             <SEO title="All posts" />
+            <Banner title={`Blog`} data={`HOME/BLOG`} />
             <div className="card-container">
                 {posts.map(post => {
                     // console.log(post);

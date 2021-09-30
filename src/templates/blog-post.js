@@ -1,22 +1,26 @@
 import * as React from "react"
+
 import { Link, graphql } from "gatsby"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import Banner from "../components/banner"
 
 const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark
   const image = getImage(post.frontmatter.image)
   const siteTitle = data.site.siteMetadata?.title || `Title`
+  const postTitle = post.frontmatter.title
   const { previous, next } = data
 
   return (
     <Layout location={location} title={siteTitle}>
       <SEO
-        title={post.frontmatter.title}
+        title={postTitle}
         description={post.frontmatter.description || post.excerpt}
       />
+      <Banner title={postTitle} data={``} />
       <article
         className="blog-post"
         itemScope
@@ -25,7 +29,7 @@ const BlogPostTemplate = ({ data, location }) => {
         <header >
           <div className="expand">
             <GatsbyImage
-              className="image-tester"
+              className="hero-image"
               image={image}
               alt={``}
             />
@@ -92,7 +96,7 @@ export const pageQuery = graphql`
         description
         image {
           childImageSharp {
-            gatsbyImageData(height: 479, transformOptions: {fit: COVER})
+            gatsbyImageData(transformOptions: {fit: COVER})
           }
         }
       }

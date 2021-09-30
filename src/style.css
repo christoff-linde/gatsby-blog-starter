@@ -25,6 +25,7 @@
   --spacing-10: 2.5rem;
   --spacing-11: 2.625rem;
   --spacing-12: 3rem;
+  --spacing-14: 3.398rem;
   --spacing-16: 4rem;
   --spacing-20: 5rem;
   --spacing-24: 6rem;
@@ -263,11 +264,12 @@ a:focus {
 }
 
 .global-header {
-  margin-bottom: var(--spacing-12);
+  margin-bottom: var(--spacing-7);
 }
 
 .global-header > nav {
   display: flex;
+  align-items: center;
 }
 
 .aside-container {
@@ -428,6 +430,7 @@ a:focus {
   /* gap: 1rem; */
   row-gap: 42px;
   column-gap: 38px;
+  margin-top: var(--spacing-14);
 }
 
 .card-body {
@@ -463,32 +466,62 @@ a:focus {
 
 .expand {
   width: 100vw;
-  margin: 0 auto;
   position: relative;
   left: 50%;
   right: 50%;
+  margin: 0 auto;
   margin-left: -50vw;
   margin-right: -50vw;
-  background-color: var(--color-white);
   /* padding: var(--spacing-10) var(--spacing-5); */
   display: flex;
   justify-content: center;
 }
 
-.expand .tester {
+/* .tester {
   width: 100%;
   max-width: 1432px;
-  /* background-color: rebeccapurple; */
-  display: grid;
+  display: flex;
+  gap: 10rem;
+  align-items: center;
   grid-template-columns: repeat(auto-fill, minmax(200px, 2fr));
-}
+} */
 
-.expand .image-tester {
+.expand .hero-image {
   width: 100%;
   max-width: 1432px;
-  /* background-color: rebeccapurple; */
 }
 
+.banner {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin: 0 auto;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  background-color: var(--color-white);
+  box-shadow: 0px 3px 6px #00000029;
+}
+
+.con {
+  max-width: 1432px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.con p {
+  margin: 0;
+  font-family: var(--fontFamily-sans);
+  color: var(--color-text-light);
+}
+
+.nav-bar {
+  display: flex;
+  /* justify-content: center; */
+  /* align-items: center; */
+}
 /* Media queries */
 
 @media (max-width: 42rem) {
@@ -505,5 +538,9 @@ a:focus {
 @media (max-width: 1432px) {
   .global-wrapper {
     padding: var(--spacing-10) var(--spacing-5);
+  }
+
+  .con {
+    margin: 24px;
   }
 }

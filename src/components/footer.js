@@ -2,11 +2,11 @@ import * as React from "react"
 
 import { Link } from "gatsby"
 
-const PageFooter = ({ data }) => {
+const PageFooter = () => {
     return (
         <footer>
             <div className="global-footer expand">
-                <div className="tester">
+                <div className="">
                     <div>
                         <h4>My Animals &trade;</h4>
                         <p>&copy; TeamGeek</p>
