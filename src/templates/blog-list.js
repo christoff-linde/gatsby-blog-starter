@@ -46,13 +46,20 @@ const BlogListTemplate = ({ data, location, pageContext }) => {
             </div>
             <div className="center-container">
                 <ul className="page-list">
-                    {!isFirst && (
+                    <li className="page-arrow">
+                        {!isFirst && (
+                            <Link to={prevPage} rel="prev">
+                                &lt;
+                            </Link>
+                        )}
+                    </li>
+                    {/* {!isFirst && (
                         <li className="page-arrow">
                             <Link to={prevPage} rel="prev">
                                 &lt;
                             </Link>
                         </li>
-                    )}
+                    )} */}
                     {Array.from({ length: numPages }, (_, i) => (
                         <li className="page-link"
                             key={`pagination-number${i + 1}`}>
@@ -67,13 +74,13 @@ const BlogListTemplate = ({ data, location, pageContext }) => {
                             </Link>
                         </li>
                     ))}
-                    {!isLast && (
-                        <li className="page-arrow">
+                    <li className="page-arrow">
+                        {!isLast && (
                             <Link to={nextPage} rel="next">
                                 &gt;
                             </Link>
-                        </li>
-                    )}
+                        )}
+                    </li>
                 </ul>
             </div>
         </Layout>
@@ -101,7 +108,7 @@ query blogPageQuery($skip: Int!, $limit: Int!) {
             slug
           }
           frontmatter {
-            date(formatString: "DD MMMM, YYYY")
+            date(formatString: "MMMM DD, YYYY")
             title
             description
             image {

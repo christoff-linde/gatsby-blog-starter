@@ -22,12 +22,14 @@ const BlogPostTemplate = ({ data, location }) => {
         itemScope
         itemType="http://schema.org/Article"
       >
-        <header>
-          <GatsbyImage
-            className="expand"
-            image={image}
-            alt={``}
-          />
+        <header >
+          <div className="expand">
+            <GatsbyImage
+              className="image-tester"
+              image={image}
+              alt={``}
+            />
+          </div>
           <h1 itemProp="headline">{post.frontmatter.title}</h1>
           <p>{post.frontmatter.date}</p>
         </header>
