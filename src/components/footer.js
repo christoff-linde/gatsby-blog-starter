@@ -6,15 +6,15 @@ const PageFooter = () => {
     return (
         <footer>
             <div className="global-footer expand">
-                <div className="">
+                <div className="help">
                     <div>
                         <h4>My Animals &trade;</h4>
-                        <p>&copy; TeamGeek</p>
+                        <p className="copyright-text">&copy; 2021 TeamGeek</p>
                     </div>
                     <div>
                         <h5>About Us</h5>
-                        <ul>
-                            <li>
+                        <ul className="footer-list">
+                            <li className="">
                                 <Link to="">
                                     Locations
                                 </Link>
@@ -38,7 +38,7 @@ const PageFooter = () => {
                     </div>
                     <div>
                         <h5>Product</h5>
-                        <ul>
+                        <ul className="footer-list">
                             <li>
                                 <Link to="">
                                     Prints
@@ -63,7 +63,7 @@ const PageFooter = () => {
                     </div>
                     <div>
                         <h5>Contact Us</h5>
-                        <ul>
+                        <ul className="footer-list">
                             <li>
                                 <Link to="">
                                     work@teamgeek.io

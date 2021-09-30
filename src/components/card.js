@@ -9,7 +9,7 @@ const BlogCard = ({ data }) => {
     const title = post.node.frontmatter.title || post.node.fields.slug
 
     return (
-        <div className="post-list-item">
+        <div className="card-list-item">
             <div className="card-header">
                 <GatsbyImage
                     style={{

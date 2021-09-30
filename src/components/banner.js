@@ -4,7 +4,7 @@ const Banner = ({ title, data }) => {
     const path = data || ``
     return (
         <div className="banner">
-            <div className="con">
+            <div className="banner-content">
                 <h3>{title}</h3>
                 <p>{path}</p>
             </div>
