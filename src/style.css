@@ -57,7 +57,7 @@
   --fontSize-5: 2.074rem;
   --fontSize-6: 2.488rem;
   --fontSize-7: 2.986rem;
-  --color-primary: #005b99;
+  --color-primary: #000033;
   --color-text: #2e353f;
   --color-text-light: #707070;
   --color-heading: #000033;
@@ -66,6 +66,9 @@
 
   --color-background: #f0f0f0;
   --color-white: #ffffff;
+
+  --icon-width: 47px;
+  --icon-height: 47px;
 }
 
 /* HTML elements */
@@ -293,11 +296,11 @@ a:focus {
   border-radius: 7px;
   box-shadow: 0px 3px 10px #00000029;
   height: 639px;
+  transition: all 0.3s ease-in-out;
 }
 
 .post-list-item:hover {
-  transform: scale(102%);
-  transition: all 0.3s;
+  transform: scale(101%);
   cursor: pointer;
 }
 
@@ -316,31 +319,19 @@ a:focus {
   margin-bottom: var(--spacing-4);
 }
 
+.center-container {
+  display: flex;
+  justify-content: center;
+}
+
 .page-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  list-style: none;
+  justify-content: space-around;
   gap: 18px;
-  max-width: fit-content;
-}
-
-.page-list li:hover {
-  transition: all 0.3s;
-  background-color: var(--color-primary);
-}
-
-.page-list li {
-  border-radius: 3px;
-  color: var(--color-heading);
-  box-shadow: 0px 3px 6px #00000029;
-  background-color: var(--color-white);
-  width: 47px;
-  height: 47px;
-  display: flex;
   align-items: center;
-  justify-content: center;
+  list-style-type: none;
+  max-width: fit-content;
 }
 
 .page-list a {
@@ -348,6 +339,40 @@ a:focus {
   font-family: var(--fontFamily-sans);
   font-size: var(--fontSize-2);
   font-weight: var(--fontWeight-bold);
+  color: var(--color-heading);
+}
+
+.page-link a {
+  border-radius: 3px;
+  box-shadow: 0px 3px 6px #00000029;
+  background-color: var(--color-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  width: var(--icon-width);
+  height: var(--icon-height);
+  transition: all 0.3s ease-in-out;
+}
+
+.page-link a:hover {
+  color: var(--color-white);
+  background-color: var(--color-primary);
+}
+
+.page-arrow {
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--icon-width);
+  height: var(--icon-height);
+  transition: all 0.3s ease-in-out;
+}
+
+.page-arrow:hover {
+  background-color: var(--color-white);
+  box-shadow: 0px 3px 6px #00000029;
 }
 
 .header-link-home {
@@ -427,7 +452,7 @@ a:focus {
   color: var(--color-text-light);
 }
 
-.card-body h2{
+.card-body h2 {
   font-weight: var(--fontWeight-semibold);
   color: var(--color-heading);
   font-size: var(--fontSize-2);
