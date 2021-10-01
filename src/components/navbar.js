@@ -2,7 +2,7 @@ import * as React from "react"
 
 import { useState } from "react"
 import { Link } from "gatsby"
-import { stack as Menu } from "react-burger-menu"
+import { slide as Menu } from "react-burger-menu"
 import styled from "styled-components"
 
 const Navbar = () => {
