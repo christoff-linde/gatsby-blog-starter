@@ -10,8 +10,6 @@ const BlogListTemplate = ({ data, location, pageContext }) => {
     const siteTitle = data.site.siteMetadata?.title || `Title`
     const posts = data.allMarkdownRemark.edges
 
-    console.log(data);
-
     const { currentPage, numPages } = pageContext
     const isFirst = currentPage === 1
     const isLast = currentPage === numPages
