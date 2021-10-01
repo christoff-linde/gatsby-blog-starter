@@ -26,7 +26,7 @@ const BlogCard = ({ data }) => {
                     </h2>
                     <p
                         dangerouslySetInnerHTML={{
-                            __html: data.node.frontmatter.description || data.node.excerpt,
+                            __html: data.node.excerpt || data.node.frontmatter.description,
                         }}
                         itemProp="description"
                     />

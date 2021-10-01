@@ -2,7 +2,7 @@ import * as React from "react"
 
 import { useState } from "react"
 import { Link } from "gatsby"
-import { stack as Menu } from "react-burger-menu"
+import { slide as Menu } from "react-burger-menu"
 import styled from "styled-components"
 
 const Navbar = () => {
@@ -82,6 +82,10 @@ const TopNav = styled.div`
   width: 100%;
   margin: 0 auto;
   padding-left: 1rem;
+
+  @media(max-width: 1432px) {
+    padding-right: 1rem;
+  }
 `
 
 const NavItems = styled.div`
@@ -96,13 +100,6 @@ const NavItems = styled.div`
   @media(max-width: 721px) {
     display: none;
   }
-`
-
-const Logo = styled.div`
-    h2 {
-
-      color: #F0F0F0;
-    }
 `
 
 const SideMenu = styled.div`
@@ -132,7 +129,7 @@ const SideMenu = styled.div`
   .bm-cross-button {
     height: 42px;
     width: 42px;
-    margin: 1rem;
+    margin: 2rem;
   }
 
   .bm-cross {
