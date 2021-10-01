@@ -9,30 +9,30 @@ const BlogCard = ({ data }) => {
 
     return (
         <div className="card-list-item">
-            <div className="card-header">
-                <GatsbyImage
-                    style={{
-                        borderRadius: '7px 7px 0px 0px',
-                        height: '344px'
-                    }}
-                    image={image}
-                    alt={title} />
-            </div>
-            <div className="card-body">
-                <small>{data.node.frontmatter.date}</small>
-                <h2>
-                    <Link to={data.node.fields.slug} itemProp="url">
+            <Link to={data.node.fields.slug} itemProp="url">
+                <div className="card-header">
+                    <GatsbyImage
+                        style={{
+                            borderRadius: '7px 7px 0px 0px',
+                            height: '344px'
+                        }}
+                        image={image}
+                        alt={title} />
+                </div>
+                <div className="card-body">
+                    <small>{data.node.frontmatter.date}</small>
+                    <h2>
                         <span itemProp="headline">{title}</span>
-                    </Link>
-                </h2>
-                <p
-                    dangerouslySetInnerHTML={{
-                        __html: data.node.frontmatter.description || data.node.excerpt,
-                    }}
-                    itemProp="description"
-                />
-            </div>
-        </div>
+                    </h2>
+                    <p
+                        dangerouslySetInnerHTML={{
+                            __html: data.node.frontmatter.description || data.node.excerpt,
+                        }}
+                        itemProp="description"
+                    />
+                </div>
+            </Link>
+        </div >
     )
 }
 
