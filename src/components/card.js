@@ -16,7 +16,7 @@ const BlogCard = ({ data }) => {
                         height: '344px'
                     }}
                     image={image}
-                    alt={` `} />
+                    alt={title} />
             </div>
             <div className="card-body">
                 <small>{data.node.frontmatter.date}</small>
