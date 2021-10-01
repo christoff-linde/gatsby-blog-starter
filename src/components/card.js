@@ -4,7 +4,6 @@ import * as React from 'react'
 
 const BlogCard = ({ data }) => {
     const post = data
-    console.log(post);
     const image = getImage(post.node.frontmatter.image)
     const title = post.node.frontmatter.title || post.node.fields.slug
 

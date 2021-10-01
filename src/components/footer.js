@@ -65,8 +65,8 @@ const PageFooter = () => {
                         <h5>Contact Us</h5>
                         <ul className="footer-list">
                             <li>
-                                <div itemscope itemtype="http://schema.org/LocalBusiness">
-                                    <span itemprop="email">
+                                <div itemScope itemType="http://schema.org/LocalBusiness">
+                                    <span itemProp="email">
                                         <a href="mailto:work@teamgeek.io">
                                             work@teamgeek.io
                                         </a>
@@ -74,8 +74,8 @@ const PageFooter = () => {
                                 </div>
                             </li>
                             <li>
-                                <div itemscope itemtype="http://schema.org/LocalBusiness">
-                                    <span itemprop="telephone">
+                                <div itemScope itemType="http://schema.org/LocalBusiness">
+                                    <span itemProp="telephone">
                                         <a href="tel:+278912008">
                                             +278912008
                                         </a>
