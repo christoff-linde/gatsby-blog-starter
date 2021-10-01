@@ -10,7 +10,7 @@ const Navbar = () => {
                     My Animals &trade;
                 </Link>
             </h1>
-            {/* <div className="aside-container">
+            <div className="aside-container">
                 <h5>
                     <Link to="/">Home</Link>
                 </h5>
@@ -20,7 +20,7 @@ const Navbar = () => {
                 <h5>
                     <Link to="/">Shop</Link>
                 </h5>
-            </div> */}
+            </div>
         </nav>
     )
 }
