@@ -35,9 +35,6 @@ const BlogListTemplate = ({ data, location, pageContext }) => {
             <Banner title={`Blog`} data={`HOME/BLOG`} />
             <div className="card-container">
                 {posts.map(post => {
-                    // console.log(post);
-                    // const image = getImage(post.node.frontmatter.image);
-                    // const title = post.node.frontmatter.title || post.node.fields.slug;
                     return (
                         <BlogCard key={post.node.fields.slug} data={post} />
                     )

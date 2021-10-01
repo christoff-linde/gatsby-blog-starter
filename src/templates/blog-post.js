@@ -10,6 +10,7 @@ import Banner from "../components/banner"
 const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark
   const image = getImage(post.frontmatter.image)
+
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const postTitle = post.frontmatter.title
   const { previous, next } = data
@@ -31,7 +32,7 @@ const BlogPostTemplate = ({ data, location }) => {
             <GatsbyImage
               className="hero-image"
               image={image}
-              alt={``}
+              alt={postTitle}
             />
           </div>
           <h1 itemProp="headline">{post.frontmatter.title}</h1>
