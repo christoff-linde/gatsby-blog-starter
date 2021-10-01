@@ -573,6 +573,11 @@ a {
   width: 100%;
 }
 
+.bm-menu {
+  font-family: var(--fontFamily-sans);
+  color: var(--color-text-light);
+}
+
 /* Media queries */
 
 @media (max-width: 42rem) {
